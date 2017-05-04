@@ -9,3 +9,20 @@ notifications:
   email:
     recipients:
       - kls@justcode.com
+
+integrations:
+  notifications:
+    - integrationName: trigger_report
+      type: webhook
+      payload:
+        - job_id=$JOB_ID
+        - branch_name=$BRANCH
+        - repo_name=$REPO_NAME
+        - repo_full_name=$REPO_FULL_NAME
+      branches:
+        only:
+          - master
+      on_success: always
+      on_failure: always
+      on_pull_request: never
+      on_start: never

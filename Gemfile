@@ -38,6 +38,7 @@ group :development, :test do
   gem 'rspec', '2.14.1'
   gem 'rspec-rails'
   gem 'ci_reporter_rspec'
+  gem 'simplecov', :require => false
   gem 'ffaker'
   gem 'factory_girl_rails'
 end
