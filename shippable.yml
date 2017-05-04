@@ -1,0 +1,15 @@
+language: ruby
+
+rvm:
+  - 2.3.1
+
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+
+script:
+  - bin/rspec -f documentation -o shippable/testresults/results.txt
+
+notifications:
+  email:
+    recipients:
+      - kls@justcode.com
