@@ -15,7 +15,10 @@ integrations:
     - integrationName: trigger_report
       type: webhook
       payload:
+        - project_id=$PROJECT_ID
+        - shippable_build_id=$SHIPPABLE_BUILD_ID
         - job_id=$JOB_ID
+        - shippable_job_id=$SHIPPABLE_JOB_ID
         - branch_name=$BRANCH
         - repo_name=$REPO_NAME
         - repo_full_name=$REPO_FULL_NAME
