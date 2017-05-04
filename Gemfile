@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec', '2.14.1'
   gem 'rspec-rails'
+  gem 'ci_reporter_rspec'
   gem 'ffaker'
   gem 'factory_girl_rails'
 end
